@@ -1,0 +1,33 @@
+title: Pikesh Maharjan
+description: Personal portfolio and independent blog by Pikesh Maharjan.
+url: "https://www.pikeshmaharjan.com.np"
+baseurl: ""
+permalink: /blog/:categories/:year/:month/:day/:title/
+timezone: Asia/Dubai
+
+author:
+  name: Pikesh Maharjan
+  url: "https://www.pikeshmaharjan.com.np"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: "blog"
+    values:
+      layout: blog
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+feed:
+  path: /blog/feed.xml
+
+exclude:
+  - BLOGGING.md
+  - Gemfile
+  - Gemfile.lock
