@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Pikesh Maharjan</title>
+  <rect width="64" height="64" rx="14" fill="#040b14"/>
+  <path d="M14 48V16h17c8 0 13 4.4 13 11.2 0 6.9-5 11.4-13 11.4h-7V48H14zm10-19h7c2.7 0 4.2-1.2 4.2-3.3 0-2-1.5-3.2-4.2-3.2h-7V29z" fill="#fff"/>
+  <circle cx="49" cy="48" r="7" fill="#149ddd"/>
+</svg>
