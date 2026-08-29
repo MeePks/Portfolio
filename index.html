@@ -9,7 +9,7 @@ layout: null
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Pikesh Maharjan | Data Engineering, Automation & More</title>
   <meta name="description" content="Pikesh Maharjan is a Dubai-based Data Engineer specializing in ETL, data quality, MDM, Azure, Databricks, SQL and Python.">
-  <meta name="keywords" content="Pikesh Maharjan, Data Engineer Dubai, ETL, Databricks, Azure, SQL, Python, MDM, data quality">
+  <meta name="theme-color" content="#07111f">
 
   <link rel="canonical" href="https://www.pikeshmaharjan.com.np/">
   <meta property="og:title" content="Pikesh Maharjan | Data Engineer">
@@ -23,22 +23,21 @@ layout: null
   <link href="assets/img/favicon.png" rel="alternate icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <link rel="preload" href="/assets/img/hero-bg.jpg" as="image" fetchpriority="high">
+  <link rel="preload" href="/assets/img/hero-bg.webp" as="image" type="image/webp" fetchpriority="high">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/shared.css" rel="stylesheet">
+  <link href="assets/css/premium.css" rel="stylesheet">
   {% include adsense-head.html %}
   <script type="application/ld+json">
   {
@@ -65,24 +64,26 @@ layout: null
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <button class="header-toggle d-xl-none" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navmenu"><i class="bi bi-list" aria-hidden="true"></i></button>
 
     <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="Pikesh Maharjan" width="250" height="250" class="img-fluid rounded-circle" style="width: 250px; height: 250px; object-fit: cover; object-position: center 50%;">
+      <picture>
+        <source srcset="/assets/img/my-profile-img.webp" type="image/webp">
+        <img src="/assets/img/my-profile-img.jpg" alt="Pikesh Maharjan" width="250" height="250" decoding="async">
+      </picture>
     </div>
 
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Pikesh Maharjan</h1>
+    <a href="/" class="logo" aria-label="Pikesh Maharjan home">
+      <span class="brand-mark" aria-hidden="true">PM</span>
+      <span><strong class="sitename">Pikesh Maharjan</strong><small>Data Engineer</small></span>
     </a>
 
-    <div class="social-links text-center">
-      <a href="https://X.com/PikeshM" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="https://facebook.com/pikesh.jupik/" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://instagram.com/mee_pkes/" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="https://github.com/meepks" class="github" aria-label="GitHub"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/in/pikesh-maharjan-6022341b4/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    <div class="social-links" aria-label="Social profiles">
+      <a href="https://X.com/PikeshM" aria-label="X profile" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+      <a href="https://facebook.com/pikesh.jupik/" aria-label="Facebook profile" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+      <a href="https://instagram.com/mee_pkes/" aria-label="Instagram profile" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+      <a href="https://github.com/meepks" aria-label="GitHub profile" target="_blank" rel="noopener noreferrer"><i class="bi bi-github" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/pikesh-maharjan-6022341b4/" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
     </div>
 
     <nav id="navmenu" class="navmenu">
@@ -104,25 +105,35 @@ layout: null
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="/assets/img/hero-bg.jpg" class="hero-image" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
+      <picture class="hero-media" aria-hidden="true">
+        <source srcset="/assets/img/hero-bg.webp" type="image/webp">
+        <img src="/assets/img/hero-bg.jpg" class="hero-image" alt="" width="1600" height="2125" fetchpriority="high" decoding="async">
+      </picture>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Pikesh Maharjan</h2>
-        <p aria-live="polite">I'm <span class="typed" data-typed-items="a Data Engineer, an ETL &amp; MDM Specialist, an Azure &amp; Databricks Engineer">a Data Engineer</span></p>
+      <div class="container hero-content">
+        <p class="hero-eyebrow"><span></span> Data Engineer · Dubai, UAE</p>
+        <h2>Building reliable data foundations for better decisions.</h2>
+        <p class="hero-summary">I design scalable pipelines, trusted master data and governed analytics platforms across SQL, Python, Azure and Databricks.</p>
+        <p class="hero-typed"><span class="typed" aria-hidden="true" data-typed-items="Reliable ETL pipelines, Trusted Golden Records, Scalable lakehouse platforms">Reliable ETL pipelines</span><span class="visually-hidden">Reliable ETL pipelines, trusted Golden Records and scalable lakehouse platforms.</span></p>
+        <div class="hero-actions">
+          <a class="hero-button primary" href="#portfolio">Explore selected work <i class="bi bi-arrow-down-right" aria-hidden="true"></i></a>
+          <a class="hero-button" href="/blog/">Read the blog <i class="bi bi-journal-text" aria-hidden="true"></i></a>
+        </div>
+        <p class="hero-role"><strong>Currently</strong> Data Engineer at Watt Utilities Commercial Brokers FZCO</p>
       </div>
 
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
     <section id="about" class="about section">
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
         <h2>About</h2>
         <p>I'm a Data Engineer based in Dubai, UAE, with more than six years of experience building dependable ETL pipelines, data-quality processes and analytics-ready platforms. I work across SQL, Python, Azure, Databricks and specialist data tooling to turn fragmented operational data into trusted, usable information.</p>
         <p>At Watt Utilities Commercial Brokers FZCO, I develop data integrations for UK energy, CRM, Companies House, Google/Places and third-party sources. My current focus includes entity resolution, Golden Records, Master Data Management, lakehouse architecture and automation that reduces manual preparation while improving governance and reliability.</p>
         <p>I completed my Master of Computer Science at Lincoln University Malaysia in 2025. Outside work, I document travel, places and cultural events through photography, video and the separate <a href="/blog/">blog</a>.</p>
       </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
             <img src="assets/img/my-profile-img.jpg" class="img-fluid" width="750" height="1000" loading="lazy" decoding="async" alt="Portrait of Pikesh Maharjan" style="width: 100%; height: 500px; object-fit: cover; object-position: center 40%;">
@@ -159,7 +170,7 @@ layout: null
 
     <!-- Stats Section -->
     <section id="stats" class="stats section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
         <div class="row gy-4">
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
@@ -191,11 +202,11 @@ layout: null
 
     <!-- Skills Section -->
     <section id="skills" class="skills section light-background">
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
         <h2>Core Skills</h2>
         <p>Technologies and practices I use to build scalable, maintainable and trusted data solutions.</p>
       </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
         <div class="row skills-content skills-animation">
           <div class="col-lg-6">
             <div class="progress"><span class="skill"><span>SQL, T-SQL &amp; MySQL</span><i class="val">Advanced</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div></div></div>
@@ -215,13 +226,13 @@ layout: null
 
     <!-- Resume Section -->
     <section id="resume" class="resume section">
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
         <h2>Experience &amp; Education</h2>
         <p>More than six years of experience delivering data integration, automation, quality and platform solutions across energy, retail and operational data environments.</p>
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-5">
             <h3 class="resume-title">Profile</h3>
             <div class="resume-item pb-0">
               <h4>Pikesh Maharjan</h4>
@@ -236,7 +247,7 @@ layout: null
             <div class="resume-item"><h4>Microsoft Certified: Azure Data Fundamentals</h4><h5>2024</h5></div>
             <div class="resume-item"><h4>Databricks Fundamentals Accreditation</h4><p>Lakehouse, Delta Lake and Databricks platform fundamentals.</p></div>
           </div>
-          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-7">
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item current">
               <h4>Data Engineer</h4>
@@ -275,16 +286,16 @@ layout: null
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section light-background">
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
         <h2>Selected Work</h2>
         <p>Representative projects across modern data platforms, integration, quality, automation and reporting. Confidential client details are intentionally generalized.</p>
       </div>
       <div class="container">
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+          <ul class="portfolio-filters isotope-filters">
             <li data-filter="*" class="filter-active">All</li><li data-filter=".filter-platform">Platforms</li><li data-filter=".filter-quality">Data Quality</li><li data-filter=".filter-automation">Automation</li>
           </ul>
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-4 isotope-container">
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-platform"><div class="portfolio-content h-100"><img src="assets/img/portfolio/app-3.jpg" class="img-fluid" width="800" height="600" loading="lazy" decoding="async" alt="Azure data pipeline project preview"><div class="portfolio-info"><h4>Azure Retail ELT Pipeline</h4><p>Parameterized ADF ingestion, watermark-based incremental loads, staging, fact processing, logging and SCD concepts.</p><span class="portfolio-tech">Azure Data Factory · Azure SQL · Storage</span><a href="https://github.com/MeePks/ADF_data_pipeline" title="View project on GitHub" class="details-link"><i class="bi bi-github"></i></a></div></div></div>
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-platform filter-quality"><div class="portfolio-content h-100"><img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" width="800" height="600" loading="lazy" decoding="async" alt="Modern data platform architecture preview"><div class="portfolio-info"><h4>UK Energy Data Platform</h4><p>Bronze, Silver and Gold processing for supplier, CRM and enrichment data with governed access and scalable transformations.</p><span class="portfolio-tech">Databricks · Delta Lake · Unity Catalog</span></div></div></div>
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-quality"><div class="portfolio-content h-100"><img src="assets/img/portfolio/product-1.jpg" class="img-fluid" width="800" height="600" loading="lazy" decoding="async" alt="Entity resolution project preview"><div class="portfolio-info"><h4>Entity Resolution &amp; Golden Records</h4><p>Normalization, blocking, fuzzy matching, deduplication and survivorship logic for trusted company and site records.</p><span class="portfolio-tech">Python · SQL · Aperture · Splink</span></div></div></div>
@@ -300,7 +311,7 @@ layout: null
     <section id="services" class="services section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
         <h2>Services</h2>
         <p>With a strong background in data engineering and automation, I help businesses turn raw data into valuable insights. From building efficient ETL pipelines to crafting clear visual reports, my goal is to make data work smarter for you. Below are the services I provide based on my skills and experience.</p>
       </div><!-- End Section Title -->
@@ -309,7 +320,7 @@ layout: null
 
         <div class="row gy-4">
 
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 service-item d-flex">
             <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
             <div>
               <h4 class="title"><a href="#contact" class="stretched-link">ETL Development and Automation</a></h4>
@@ -318,7 +329,7 @@ layout: null
           </div>
           <!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 service-item d-flex">
             <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
             <div>
               <h4 class="title"><a href="#contact" class="stretched-link">SQL Server Development & Maintenance</a></h4>
@@ -326,7 +337,7 @@ layout: null
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6 service-item d-flex">
             <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
             <div>
               <h4 class="title"><a href="#contact" class="stretched-link">Data analysis and Reporting</a></h4>
@@ -334,7 +345,7 @@ layout: null
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-4 col-md-6 service-item d-flex">
             <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
             <div>
               <h4 class="title"><a href="#contact" class="stretched-link">Data Cleaning & Preprocessing              </a></h4>
@@ -342,7 +353,7 @@ layout: null
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-4 col-md-6 service-item d-flex">
             <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
             <div>
               <h4 class="title"><a href="#contact" class="stretched-link">Data Migration & Conversion</a></h4>
@@ -350,7 +361,7 @@ layout: null
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-lg-4 col-md-6 service-item d-flex">
             <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
             <div>
               <h4 class="title"><a href="#contact" class="stretched-link">Automation Scripting</a></h4>
@@ -366,144 +377,63 @@ layout: null
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
+        <p class="section-kicker">Professional feedback</p>
         <h2>Testimonials</h2>
-        <p>Here’s what some of my colleagues and clients have to say about working with me. Their words reflect the dedication and effort I put into every project.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 6000,
-                "disableOnInteraction": false,
-                "pauseOnMouseEnter": true
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 1
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Thanks for Your Efforts on Amazon Data Loading. You are always reachable and takes additional data load positively. You are fully dedicated and your communication is perfect. Thaks for being part of Amazon Team. You are the BEST.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                
-                <h3>Pakalapati, Satyanaryana</h3>
-                <h4>Delivery Lead</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span> I had the opportunity to work with Pikesh on a few projects, I have seen him consistently demonstrated his remarkable work ethic, his eager to learn new things and his willingness to go extra miles to accomplish tasks.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <h3>Ling Yin</h3>
-                <h4>TL Engineering</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Over the years, Pikesh has consistently impressed me with his technical expertise, dedication, and strong collaborative spirit.
-
-                    Pikesh has played a pivotal role in several key projects for major clients, including Amazon and Walmart Mexico, where he demonstrated not only his proficiency in ETL processes and SQL Server but also a keen sense of responsibility and attention to detail. </span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                
-                <h3>Suraj Shakya</h3>
-                <h4>Data Engineer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Thanks for the great teamwork on the AMZ audits, the extra efforts don't go un-noticed!! </span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <h3>Curt Wolfe</h3>
-                <h4>Lead Engineer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Thank you for presenting the Strats tool today. You came prepared and clearly presented the topic. Awesome job! </span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-               
-                <h3>Del Rosario, Symla Joy</h3>
-                <h4>Director Data Management</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
+        <p>Comments shared by colleagues and leaders I have worked with across data engineering, delivery and client operations.</p>
       </div>
-
+      <div class="container">
+        <div class="testimonial-grid">
+          <figure class="testimonial-card testimonial-card--featured">
+            <blockquote>“Thanks for Your Efforts on Amazon Data Loading. You are always reachable and takes additional data load positively. You are fully dedicated and your communication is perfect. Thaks for being part of Amazon Team. You are the BEST.”</blockquote>
+            <figcaption><strong>Pakalapati, Satyanaryana</strong><span>Delivery Lead</span></figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <blockquote>“I had the opportunity to work with Pikesh on a few projects, I have seen him consistently demonstrated his remarkable work ethic, his eager to learn new things and his willingness to go extra miles to accomplish tasks.”</blockquote>
+            <figcaption><strong>Ling Yin</strong><span>TL Engineering</span></figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <blockquote>“Over the years, Pikesh has consistently impressed me with his technical expertise, dedication, and strong collaborative spirit. Pikesh has played a pivotal role in several key projects for major clients, including Amazon and Walmart Mexico, where he demonstrated not only his proficiency in ETL processes and SQL Server but also a keen sense of responsibility and attention to detail.”</blockquote>
+            <figcaption><strong>Suraj Shakya</strong><span>Data Engineer</span></figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <blockquote>“Thanks for the great teamwork on the AMZ audits, the extra efforts don't go un-noticed!!”</blockquote>
+            <figcaption><strong>Curt Wolfe</strong><span>Lead Engineer</span></figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <blockquote>“Thank you for presenting the Strats tool today. You came prepared and clearly presented the topic. Awesome job!”</blockquote>
+            <figcaption><strong>Del Rosario, Symla Joy</strong><span>Director Data Management</span></figcaption>
+          </figure>
+        </div>
+      </div>
     </section><!-- /Testimonials Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
         <h2>Contact</h2>
         <p>For professional enquiries, collaboration or conversations about data engineering and analytics, feel free to get in touch.</p>
       </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
         <div class="row gy-4 align-items-stretch">
           <div class="col-lg-5">
             <div class="info-wrap contact-details">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <div class="info-item d-flex">
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Location</h3>
                   <p>Dubai, United Arab Emirates</p>
                 </div>
               </div>
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <div class="info-item d-flex">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email</h3>
                   <p><a href="mailto:pksmaharjan.pm@gmail.com">pksmaharjan.pm@gmail.com</a></p>
                 </div>
               </div>
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <div class="info-item d-flex">
                 <i class="bi bi-linkedin flex-shrink-0"></i>
                 <div>
                   <h3>LinkedIn</h3>
@@ -514,7 +444,7 @@ layout: null
           </div>
 
           <div class="col-lg-7">
-            <div class="contact-cta" data-aos="fade-up" data-aos-delay="200">
+            <div class="contact-cta">
               <p class="eyebrow">Get in touch</p>
               <h3>Have a project, opportunity or idea to discuss?</h3>
               <p>Send me an email with a little context, or connect with me on LinkedIn. I’ll respond as soon as I can.</p>
@@ -537,13 +467,10 @@ layout: null
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
