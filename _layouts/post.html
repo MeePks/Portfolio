@@ -7,7 +7,8 @@ layout: blog
     {% if page.categories.size > 0 %}
       <div class="post-categories" aria-label="Categories">
         {% for category in page.categories %}
-          <a href="{{ '/blog/categories/#' | append: category | slugify | relative_url }}">{{ category }}</a>
+          {% assign category_slug = category | slugify %}
+          <a href="{{ '/blog/categories/#' | append: category_slug | relative_url }}">{{ category }}</a>
         {% endfor %}
       </div>
     {% endif %}
