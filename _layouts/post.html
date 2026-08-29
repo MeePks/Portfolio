@@ -1,0 +1,51 @@
+---
+layout: blog
+---
+<article class="post">
+  <header class="post-header">
+    <a class="post-back" href="{{ '/blog/' | relative_url }}">&larr; All articles</a>
+    {% if page.categories.size > 0 %}
+      <div class="post-categories" aria-label="Categories">
+        {% for category in page.categories %}
+          <a href="{{ '/blog/categories/#' | append: category | slugify | relative_url }}">{{ category }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% if page.location %}<span>{{ page.location }}</span>{% endif %}
+      {% if page.reading_time %}<span>{{ page.reading_time }} min read</span>{% endif %}
+    </div>
+  </header>
+
+  {% if page.cover_image %}
+    <figure class="post-cover">
+      <img src="{{ page.cover_image | relative_url }}" alt="{{ page.cover_alt | default: page.title }}" loading="eager">
+      {% if page.cover_caption %}<figcaption>{{ page.cover_caption }}</figcaption>{% endif %}
+    </figure>
+  {% endif %}
+
+  {% if page.youtube_id %}
+    <div class="video-embed">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}"
+        title="{{ page.youtube_title | default: page.title }}"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  {% endif %}
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  {% if page.youtube_url %}
+    <aside class="post-cta">
+      <p>Prefer watching?</p>
+      <a href="{{ page.youtube_url }}" target="_blank" rel="noopener noreferrer">Watch this story on YouTube</a>
+    </aside>
+  {% endif %}
+</article>
