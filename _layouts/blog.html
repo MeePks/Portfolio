@@ -4,38 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% seo %}
+  {% if page.noindex %}<meta name="robots" content="noindex,follow">{% endif %}
   <link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&family=Poppins:wght@500;600;700&family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/vendor/bootstrap-icons/bootstrap-icons.css' | relative_url }}">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@500;600;700&family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/vendor/bootstrap-icons/bootstrap-icons.min.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
   {% feed_meta %}
+  {% include adsense-head.html %}
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="blog-header">
     <div class="blog-shell blog-header__inner">
       <a class="blog-identity" href="{{ '/blog/' | relative_url }}">
-        <img src="{{ '/assets/img/my-profile-img.jpg' | relative_url }}" alt="">
-        <span><strong>Pikesh Maharjan</strong><small>Blog</small></span>
+        <span><strong>Pikesh Maharjan</strong><small>Independent blog</small></span>
       </a>
-      <nav aria-label="Blog navigation">
+      <nav aria-label="Primary navigation">
         <a href="{{ '/blog/' | relative_url }}"><i class="bi bi-journal-text"></i> Articles</a>
         <a href="{{ '/blog/categories/' | relative_url }}"><i class="bi bi-grid"></i> Categories</a>
         <a href="{{ '/' | relative_url }}"><i class="bi bi-person"></i> Portfolio</a>
+        <a href="{{ '/about/' | relative_url }}"><i class="bi bi-info-circle"></i> About</a>
       </nav>
     </div>
   </header>
-
-  <main class="blog-shell blog-main">
+  <main id="main-content" class="blog-shell blog-main">
     {{ content }}
   </main>
-
-  <footer class="blog-footer">
-    <div class="blog-shell">
-      <p>&copy; {{ 'now' | date: '%Y' }} Pikesh Maharjan</p>
-      <a href="{{ '/blog/feed.xml' | relative_url }}">RSS feed</a>
-    </div>
-  </footer>
+  {% include site-footer.html %}
 </body>
 </html>
