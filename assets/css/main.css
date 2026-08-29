@@ -1334,3 +1334,62 @@ section,
 .contact-button:hover { color: #fff; background: var(--accent-color); border-color: var(--accent-color); }
 .contact-button.primary { color: #fff; background: var(--accent-color); border-color: var(--accent-color); }
 @media (max-width: 575px) { .contact-cta { padding: 28px 22px; } }
+
+
+/* Statistics and contact spacing */
+.stats .stats-item {
+  min-height: 150px;
+  padding-bottom: 10px;
+}
+.stats .stats-item i {
+  margin-right: 18px;
+}
+.stats .stats-item .purecounter {
+  margin-bottom: 12px;
+  line-height: 1;
+}
+.stats .stats-item p {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 0;
+  padding: 0 0 0 60px;
+  line-height: 1.45;
+}
+.stats .stats-item p strong {
+  display: block;
+  color: var(--heading-color);
+  font-size: 16px;
+  line-height: 1.25;
+}
+.stats .stats-item p span {
+  display: block;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  font-size: 14px;
+}
+.contact .contact-details {
+  height: 100%;
+  padding-bottom: 20px;
+}
+.contact .contact-details .info-item {
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+.contact .contact-details .info-item:last-child {
+  margin-bottom: 0;
+}
+.contact .contact-details a {
+  color: var(--default-color);
+}
+.contact .contact-details a:hover {
+  color: var(--accent-color);
+}
+.contact .contact-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+}
+@media (max-width: 575px) {
+  .stats .stats-item { min-height: auto; }
+}
