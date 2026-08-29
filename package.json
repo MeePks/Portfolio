@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "configure:adsense": "node scripts/configure-adsense.mjs",
+    "audit:source": "node scripts/audit-source.mjs",
     "check:links": "node scripts/check-links.mjs"
   }
 }
