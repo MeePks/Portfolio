@@ -1,0 +1,8 @@
+{
+  "name": "pikesh-portfolio-site",
+  "private": true,
+  "scripts": {
+    "configure:adsense": "node scripts/configure-adsense.mjs",
+    "check:links": "node scripts/check-links.mjs"
+  }
+}
