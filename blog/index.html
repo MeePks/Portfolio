@@ -1,0 +1,45 @@
+---
+layout: blog
+title: Blog
+description: Stories, guides and observations from Pikesh Maharjan.
+permalink: /blog/
+---
+<section class="blog-hero">
+  <p class="eyebrow">Stories and guides</p>
+  <h1>Notes from the road and beyond.</h1>
+  <p>This is a separate space for travel stories, useful guides, cultural events and the videos that accompany them.</p>
+</section>
+
+{% if site.posts.size > 0 %}
+  <section aria-labelledby="latest-articles">
+    <div class="section-heading">
+      <h2 id="latest-articles">Latest articles</h2>
+      <a href="{{ '/blog/categories/' | relative_url }}">Browse categories</a>
+    </div>
+    <div class="post-grid">
+      {% for post in site.posts %}
+        <article class="post-card">
+          {% if post.cover_image %}
+            <a href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+              <img src="{{ post.cover_image | relative_url }}" alt="" loading="lazy">
+            </a>
+          {% endif %}
+          <div class="post-card__body">
+            {% if post.categories.size > 0 %}<p class="post-card__category">{{ post.categories | join: " · " }}</p>{% endif %}
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+            <div class="post-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+              {% if post.location %}<span>{{ post.location }}</span>{% endif %}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+{% else %}
+  <section class="empty-state">
+    <h2>Articles are coming soon</h2>
+    <p>The blog structure is ready. New Markdown posts added to <code>_posts</code> will appear here automatically.</p>
+  </section>
+{% endif %}

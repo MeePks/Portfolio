@@ -1,0 +1,37 @@
+---
+layout: blog
+title: Blog categories
+description: Browse articles by category.
+permalink: /blog/categories/
+---
+<section class="blog-hero blog-hero--compact">
+  <p class="eyebrow">Browse</p>
+  <h1>Categories</h1>
+  <p>Explore articles by subject without mixing them into the portfolio.</p>
+</section>
+
+{% if site.categories.size > 0 %}
+  <div class="category-list">
+    {% assign sorted_categories = site.categories | sort %}
+    {% for category in sorted_categories %}
+      {% assign category_name = category[0] %}
+      {% assign category_posts = category[1] %}
+      <section class="category-section" id="{{ category_name | slugify }}">
+        <h2>{{ category_name }}</h2>
+        <ul>
+          {% for post in category_posts %}
+            <li>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endfor %}
+  </div>
+{% else %}
+  <section class="empty-state">
+    <h2>No categories yet</h2>
+    <p>Categories will appear automatically when the first posts are published.</p>
+  </section>
+{% endif %}
