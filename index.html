@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,23 +31,41 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4283106568745125"
-     crossorigin="anonymous"></script>
-  <meta name="google-adsense-account" content="ca-pub-4283106568745125">
+  <link href="assets/css/shared.css" rel="stylesheet">
+  {% include adsense-head.html %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pikesh Maharjan",
+    "url": "https://www.pikeshmaharjan.com.np/",
+    "image": "https://www.pikeshmaharjan.com.np/assets/img/my-profile-img.jpg",
+    "jobTitle": "Data Engineer",
+    "worksFor": {"@type": "Organization", "name": "Watt Utilities Commercial Brokers FZCO"},
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "Lincoln University College Malaysia"},
+      {"@type": "CollegeOrUniversity", "name": "Kantipur Engineering College"}
+    ],
+    "sameAs": [
+      "https://github.com/MeePks",
+      "https://www.linkedin.com/in/pikesh-maharjan-6022341b4/"
+    ]
+  }
+  </script>
 </head>
 
 <body class="index-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle" style="width: 250px; height: 250px; object-fit: cover; object-position: center 50%;">
+      <img src="assets/img/my-profile-img.jpg" alt="Pikesh Maharjan" width="250" height="250" class="img-fluid rounded-circle" style="width: 250px; height: 250px; object-fit: cover; object-position: center 50%;">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
@@ -75,12 +96,12 @@
 
   </header>
 
-  <main class="main">
+  <main id="main-content" class="main">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/hero-bg.jpg" style="width: 100%; height: 100vh; object-fit: cover; object-position: bottom;"  alt="Pikesh Maharjan, Data Engineer" data-aos="fade-in" class="">
+      <img src="assets/img/hero-bg1.jpg" style="width: 100%; height: 100vh; object-fit: cover; object-position: bottom;"  alt="" aria-hidden="true" fetchpriority="high" decoding="async" data-aos="fade-in" class="">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Pikesh Maharjan</h2>
@@ -101,7 +122,7 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
-            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="Portrait of Pikesh Maharjan" style="width: 100%; height: 500px; object-fit: cover; object-position: center 40%;">
+            <img src="assets/img/my-profile-img.jpg" class="img-fluid" width="800" height="600" loading="lazy" decoding="async" alt="Portrait of Pikesh Maharjan" width="750" height="1000" loading="lazy" decoding="async" style="width: 100%; height: 500px; object-fit: cover; object-position: center 40%;">
           </div>
           <div class="col-lg-8 content">
             <h2>Data Engineer</h2>
@@ -241,12 +262,12 @@
             <li data-filter="*" class="filter-active">All</li><li data-filter=".filter-platform">Platforms</li><li data-filter=".filter-quality">Data Quality</li><li data-filter=".filter-automation">Automation</li>
           </ul>
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-platform"><div class="portfolio-content h-100"><img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="Azure data pipeline project preview"><div class="portfolio-info"><h4>Azure Retail ELT Pipeline</h4><p>Parameterized ADF ingestion, watermark-based incremental loads, staging, fact processing, logging and SCD concepts.</p><span class="portfolio-tech">Azure Data Factory · Azure SQL · Storage</span><a href="https://github.com/MeePks/ADF_data_pipeline" title="View project on GitHub" class="details-link"><i class="bi bi-github"></i></a></div></div></div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-platform filter-quality"><div class="portfolio-content h-100"><img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="Modern data platform architecture preview"><div class="portfolio-info"><h4>UK Energy Data Platform</h4><p>Bronze, Silver and Gold processing for supplier, CRM and enrichment data with governed access and scalable transformations.</p><span class="portfolio-tech">Databricks · Delta Lake · Unity Catalog</span></div></div></div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-quality"><div class="portfolio-content h-100"><img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="Entity resolution project preview"><div class="portfolio-info"><h4>Entity Resolution &amp; Golden Records</h4><p>Normalization, blocking, fuzzy matching, deduplication and survivorship logic for trusted company and site records.</p><span class="portfolio-tech">Python · SQL · Aperture · Splink</span></div></div></div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-automation"><div class="portfolio-content h-100"><img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="Automated operational reporting preview"><div class="portfolio-info"><h4>Operational Reporting Automation</h4><p>Python and SQL reporting for turnaround time, root-cause analysis, file processing and delivery monitoring.</p><span class="portfolio-tech">Python · SQL Server · openpyxl</span></div></div></div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-automation"><div class="portfolio-content h-100"><img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="ETL migration project preview"><div class="portfolio-info"><h4>Enterprise ETL Migration</h4><p>Actian-to-SSIS migration with reusable transformations, UAT automation, validation and production rollout controls.</p><span class="portfolio-tech">SSIS · DataConnect · T-SQL · Control-M</span></div></div></div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-quality"><div class="portfolio-content h-100"><img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="Data quality framework preview"><div class="portfolio-info"><h4>Data Quality Framework</h4><p>Rules for completeness, validity, duplicate detection, address consistency, reconciliation and exception handling.</p><span class="portfolio-tech">SQL · Python · Data profiling</span></div></div></div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-platform"><div class="portfolio-content h-100"><img src="assets/img/portfolio/app-3.jpg" class="img-fluid" width="800" height="600" loading="lazy" decoding="async" alt="Azure data pipeline project preview"><div class="portfolio-info"><h4>Azure Retail ELT Pipeline</h4><p>Parameterized ADF ingestion, watermark-based incremental loads, staging, fact processing, logging and SCD concepts.</p><span class="portfolio-tech">Azure Data Factory · Azure SQL · Storage</span><a href="https://github.com/MeePks/ADF_data_pipeline" title="View project on GitHub" class="details-link"><i class="bi bi-github"></i></a></div></div></div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-platform filter-quality"><div class="portfolio-content h-100"><img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" width="800" height="600" loading="lazy" decoding="async" alt="Modern data platform architecture preview"><div class="portfolio-info"><h4>UK Energy Data Platform</h4><p>Bronze, Silver and Gold processing for supplier, CRM and enrichment data with governed access and scalable transformations.</p><span class="portfolio-tech">Databricks · Delta Lake · Unity Catalog</span></div></div></div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-quality"><div class="portfolio-content h-100"><img src="assets/img/portfolio/product-1.jpg" class="img-fluid" width="800" height="600" loading="lazy" decoding="async" alt="Entity resolution project preview"><div class="portfolio-info"><h4>Entity Resolution &amp; Golden Records</h4><p>Normalization, blocking, fuzzy matching, deduplication and survivorship logic for trusted company and site records.</p><span class="portfolio-tech">Python · SQL · Aperture · Splink</span></div></div></div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-automation"><div class="portfolio-content h-100"><img src="assets/img/portfolio/app-1.jpg" class="img-fluid" width="800" height="600" loading="lazy" decoding="async" alt="Automated operational reporting preview"><div class="portfolio-info"><h4>Operational Reporting Automation</h4><p>Python and SQL reporting for turnaround time, root-cause analysis, file processing and delivery monitoring.</p><span class="portfolio-tech">Python · SQL Server · openpyxl</span></div></div></div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-automation"><div class="portfolio-content h-100"><img src="assets/img/portfolio/app-2.jpg" class="img-fluid" width="800" height="600" loading="lazy" decoding="async" alt="ETL migration project preview"><div class="portfolio-info"><h4>Enterprise ETL Migration</h4><p>Actian-to-SSIS migration with reusable transformations, UAT automation, validation and production rollout controls.</p><span class="portfolio-tech">SSIS · DataConnect · T-SQL · Control-M</span></div></div></div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-quality"><div class="portfolio-content h-100"><img src="assets/img/portfolio/product-2.jpg" class="img-fluid" width="800" height="600" loading="lazy" decoding="async" alt="Data quality framework preview"><div class="portfolio-info"><h4>Data Quality Framework</h4><p>Rules for completeness, validity, duplicate detection, address consistency, reconciliation and exception handling.</p><span class="portfolio-tech">SQL · Python · Data profiling</span></div></div></div>
           </div>
         </div>
       </div>
@@ -484,11 +505,7 @@
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-
-
-
-  </footer>
+  {% include site-footer.html %}
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -498,12 +515,10 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
