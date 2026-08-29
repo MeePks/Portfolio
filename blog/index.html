@@ -1,45 +1,43 @@
 ---
 layout: blog
 title: Blog
-description: Stories, guides and observations from Pikesh Maharjan.
+description: Original travel notes, practical guides, cultural observations and supporting videos by Pikesh Maharjan.
 permalink: /blog/
+noindex: true
 ---
 <section class="blog-hero">
-  <p class="eyebrow">Stories and guides</p>
-  <h1>Notes from the road and beyond.</h1>
-  <p>This is a separate space for travel stories, useful guides, cultural events and the videos that accompany them.</p>
+  <p class="eyebrow">Independent publishing</p>
+  <h1>Stories, useful details and observations.</h1>
+  <p>A separate space for original travel notes, practical guides, cultural events and videos. The professional portfolio remains available from the main navigation.</p>
+  <div class="blog-hero__links">
+    <a href="{{ '/about/' | relative_url }}">Editorial approach</a>
+    <a href="{{ '/blog/categories/' | relative_url }}">Browse categories</a>
+  </div>
 </section>
 
 {% if site.posts.size > 0 %}
   <section aria-labelledby="latest-articles">
-    <div class="section-heading">
-      <h2 id="latest-articles">Latest articles</h2>
-      <a href="{{ '/blog/categories/' | relative_url }}">Browse categories</a>
-    </div>
+    <div class="section-heading"><h2 id="latest-articles">Latest articles</h2><a href="{{ '/blog/categories/' | relative_url }}">All categories</a></div>
     <div class="post-grid">
       {% for post in site.posts %}
         <article class="post-card">
           {% if post.cover_image %}
-            <a href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
-              <img src="{{ post.cover_image | relative_url }}" alt="" loading="lazy">
-            </a>
+            <a href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ post.cover_image | relative_url }}" alt="" width="800" height="450" loading="lazy" decoding="async"></a>
           {% endif %}
           <div class="post-card__body">
             {% if post.categories.size > 0 %}<p class="post-card__category">{{ post.categories | join: " · " }}</p>{% endif %}
             <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
             {% if post.description %}<p>{{ post.description }}</p>{% endif %}
-            <div class="post-meta">
-              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-              {% if post.location %}<span>{{ post.location }}</span>{% endif %}
-            </div>
+            <div class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>{% if post.location %}<span>{{ post.location }}</span>{% endif %}</div>
           </div>
         </article>
       {% endfor %}
     </div>
+    {% include ad-slot.html location="blog-index-end" %}
   </section>
 {% else %}
   <section class="empty-state">
-    <h2>Articles are coming soon</h2>
-    <p>The blog structure is ready. New Markdown posts added to <code>_posts</code> will appear here automatically.</p>
+    <h2>Original articles are being prepared</h2>
+    <p>This section will remain out of search indexes until substantive articles are published. The site will not invent or bulk-publish thin content solely for advertising approval.</p>
   </section>
 {% endif %}
