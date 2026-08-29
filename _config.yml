@@ -38,5 +38,6 @@ exclude:
   - package.json
   - package-lock.json
   - node_modules
+  - vendor
   - scripts
   - _data/runtime.example.json
