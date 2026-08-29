@@ -7,18 +7,22 @@
   <link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&family=Poppins:wght@500;600;700&family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/vendor/bootstrap-icons/bootstrap-icons.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
   {% feed_meta %}
 </head>
 <body>
   <header class="blog-header">
     <div class="blog-shell blog-header__inner">
-      <a class="blog-brand" href="{{ '/blog/' | relative_url }}">Pikesh's Blog</a>
+      <a class="blog-identity" href="{{ '/blog/' | relative_url }}">
+        <img src="{{ '/assets/img/my-profile-img.jpg' | relative_url }}" alt="">
+        <span><strong>Pikesh Maharjan</strong><small>Blog</small></span>
+      </a>
       <nav aria-label="Blog navigation">
-        <a href="{{ '/blog/' | relative_url }}">Articles</a>
-        <a href="{{ '/blog/categories/' | relative_url }}">Categories</a>
-        <a href="{{ '/' | relative_url }}">Portfolio</a>
+        <a href="{{ '/blog/' | relative_url }}"><i class="bi bi-journal-text"></i> Articles</a>
+        <a href="{{ '/blog/categories/' | relative_url }}"><i class="bi bi-grid"></i> Categories</a>
+        <a href="{{ '/' | relative_url }}"><i class="bi bi-person"></i> Portfolio</a>
       </nav>
     </div>
   </header>
