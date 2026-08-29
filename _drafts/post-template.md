@@ -1,45 +1,54 @@
 ---
-title: "Replace with the article title"
-description: "One concise sentence used on the blog index and by search engines."
+title: "Replace with a specific, descriptive article title"
+description: "Summarize the original value of the article in one clear sentence."
 date: 2026-08-29
+updated: 2026-08-29
 categories:
   - travel
 location: "Place, Country"
-cover_image: /assets/img/blog/example-cover.webp
-cover_alt: "Describe what is visible in the cover photograph"
-cover_caption: "Optional photo caption or credit"
-youtube_id: "YOUTUBE_VIDEO_ID"
-youtube_url: "https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID"
-youtube_title: "Accessible title for the embedded video"
+cover_image: /assets/img/blog/replace-with-optimized-cover.webp
+cover_alt: "Describe what is visible without keyword stuffing"
+cover_caption: "Optional context or photo credit"
+youtube_id: ""
+youtube_url: ""
+youtube_title: ""
 reading_time: 6
+sources:
+  - title: "Replace with a useful or authoritative source"
+    url: "https://example.com/"
 ---
 
-Write a short introduction explaining what the reader will learn.
+Open with firsthand context: when you visited, why you went, and exactly what this guide helps the reader do.
 
-## Why visit
+## Why this is worth knowing
 
-Explain what makes the destination, event or story valuable.
+Share original observations, not a generic destination summary.
 
 ## Essential information
 
-- **Best time:** Add the recommended season or time.
-- **Getting there:** Explain the route and transportation.
-- **Expected cost:** Add a dated estimate and currency.
-- **Time required:** Add a realistic duration.
+- **Information checked:** Add the month and year.
+- **Best time:** Explain the trade-offs.
+- **Getting there:** Give the route you actually used or clearly label researched alternatives.
+- **Expected cost:** State currency and when the estimate was checked.
+- **Time required:** Give a realistic range.
+- **Accessibility:** Add relevant mobility, terrain or facility information where known.
 
-## What to expect
+## What I experienced
 
-Describe the experience using your own observations.
+Use your own notes, photographs and practical details.
 
-## Useful tips
+## Suggested plan
 
-Include practical, respectful and safety-conscious advice.
+Provide a useful sequence rather than padding the article to increase length.
 
-## Cultural context
+## Cultural context and etiquette
 
-For Jatras and cultural events, explain the meaning carefully, cite reliable sources, and mention etiquette or photography restrictions.
+For Jatras and cultural events, distinguish observation from history, cite reliable sources, and explain respectful behavior and photography restrictions.
+
+## Limitations and updates
+
+State what you could not verify and which details may change.
 
 ## Related links
 
-- [Watch the video on YouTube](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
-- Add maps, official information, or related articles here.
+Link to a relevant article, official source or your supporting YouTube video. Do not add unrelated links solely for SEO.

@@ -1,9 +1,10 @@
 title: Pikesh Maharjan
-description: Personal portfolio and independent blog by Pikesh Maharjan.
+description: Personal portfolio and independently published articles by Pikesh Maharjan.
 url: "https://www.pikeshmaharjan.com.np"
 baseurl: ""
 permalink: /blog/:categories/:year/:month/:day/:title/
 timezone: Asia/Dubai
+lang: en
 
 author:
   name: Pikesh Maharjan
@@ -23,11 +24,20 @@ defaults:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 feed:
   path: /blog/feed.xml
 
 exclude:
+  - ADSENSE.md
   - BLOGGING.md
+  - CLOUDFLARE.md
   - Gemfile
   - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - node_modules
+  - vendor
+  - scripts
+  - _data/runtime.example.json

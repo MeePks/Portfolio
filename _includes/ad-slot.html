@@ -1,0 +1,15 @@
+{% assign adsense_client = site.data.runtime.adsense_client_id | default: "" | strip %}
+<aside class="ad-slot" aria-label="Advertisement" data-ad-location="{{ include.location | default: 'content' }}">
+  <span class="ad-slot__label">Advertisement</span>
+  {% if adsense_client != "" and include.slot %}
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="{{ adsense_client | escape }}"
+         data-ad-slot="{{ include.slot | escape }}"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  {% else %}
+    <div class="ad-slot__placeholder" aria-hidden="true">Reserved advertising space</div>
+  {% endif %}
+</aside>
