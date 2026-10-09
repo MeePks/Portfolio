@@ -238,6 +238,14 @@ h1, h2, h3 {
   background: #000;
 }
 
+.video-embed--short {
+  width: min(100%, 380px);
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 0;
+  aspect-ratio: 9 / 16;
+}
+
 .video-embed iframe {
   position: absolute;
   inset: 0;

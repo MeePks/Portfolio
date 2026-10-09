@@ -1,4 +1,4 @@
-<div class="video-embed">
+<div class="video-embed{% if include.short %} video-embed--short{% endif %}">
   <iframe
     src="https://www.youtube-nocookie.com/embed/{{ include.id }}"
     title="{{ include.title | default: 'YouTube video' | escape }}"
