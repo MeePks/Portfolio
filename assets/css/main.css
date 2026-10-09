@@ -174,11 +174,12 @@ h6 {
   margin-right: 8px;
 }
 
-.header .logo h1 {
+.header .logo .sitename {
   font-size: 24px;
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
+  font-family: var(--heading-font);
 }
 
 .header .social-links {
@@ -575,7 +576,7 @@ section,
   z-index: 3;
 }
 
-.hero h2 {
+.hero h1 {
   margin: 0;
   font-size: 64px;
   font-weight: 700;
@@ -609,7 +610,7 @@ section,
 }
 
 @media (max-width: 768px) {
-  .hero h2 {
+  .hero h1 {
     font-size: 32px;
   }
 
@@ -721,6 +722,14 @@ section,
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
+.resume .section-title {
+  padding-bottom: 40px;
+}
+
+.resume .resume-download {
+  margin-top: 22px;
+}
+
 .resume .resume-title {
   color: var(--heading-color);
   font-size: 26px;
@@ -839,8 +848,9 @@ section,
   padding: 15px;
 }
 
-.portfolio .portfolio-content .portfolio-info h4 {
+.portfolio .portfolio-content .portfolio-info h3 {
   font-size: 14px;
+  margin: 1.33em 0;
   padding: 5px 10px;
   font-weight: 400;
   color: #ffffff;
@@ -926,6 +936,7 @@ section,
 
 .services .service-item .title {
   font-weight: 700;
+  margin-top: 1.33em;
   margin-bottom: 15px;
   font-size: 18px;
 }

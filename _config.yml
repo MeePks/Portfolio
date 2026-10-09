@@ -13,9 +13,14 @@ author:
 defaults:
   - scope:
       path: ""
+    values:
+      image: /assets/img/og-card.jpg
+  - scope:
+      path: ""
       type: posts
     values:
       layout: post
+      image: /assets/img/og-card.jpg
   - scope:
       path: "blog"
     values:

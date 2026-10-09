@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% seo %}
+  {% include seo-head.html %}
   {% if page.noindex %}<meta name="robots" content="noindex,follow">{% endif %}
   <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="alternate icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
@@ -21,7 +21,7 @@
       <a class="blog-identity" href="{{ '/' | relative_url }}"><span><strong>Pikesh Maharjan</strong><small>Portfolio</small></span></a>
       <nav aria-label="Primary navigation">
         <a href="{{ '/' | relative_url }}"><i class="bi bi-person"></i> Portfolio</a>
-        <a href="{{ '/blog/' | relative_url }}"><i class="bi bi-journal-text"></i> Blog</a>
+        <a href="{{ '/blog/' | relative_url }}"><i class="bi bi-journal-text"></i> Travel &amp; Culture</a>
         <a href="{{ '/contact/' | relative_url }}"><i class="bi bi-envelope"></i> Contact</a>
       </nav>
     </div>
