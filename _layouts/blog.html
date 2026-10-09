@@ -16,24 +16,18 @@
   {% feed_meta %}
   {% include adsense-head.html %}
 </head>
-<body>
+<body class="blog-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="blog-header">
     <div class="blog-shell blog-header__inner">
-      <a class="blog-identity" href="{{ '/blog/' | relative_url }}">
-        <span><strong>Pikesh Maharjan</strong><small>Independent blog</small></span>
-      </a>
-      <nav aria-label="Primary navigation">
-        <a href="{{ '/blog/' | relative_url }}"><i class="bi bi-journal-text"></i> Articles</a>
-        <a href="{{ '/blog/categories/' | relative_url }}"><i class="bi bi-grid"></i> Categories</a>
-        <a href="{{ '/' | relative_url }}"><i class="bi bi-person"></i> Portfolio</a>
-        <a href="{{ '/about/' | relative_url }}"><i class="bi bi-info-circle"></i> About</a>
-      </nav>
+      <a class="blog-identity" href="{{ '/' | relative_url }}">Pikesh Maharjan</a>
     </div>
   </header>
-  <main id="main-content" class="blog-shell blog-main">
-    {{ content }}
+  <main id="main-content">
+    <div class="blog-shell blog-main">
+      {{ content }}
+    </div>
+    {% include site-footer.html %}
   </main>
-  {% include site-footer.html %}
 </body>
 </html>
