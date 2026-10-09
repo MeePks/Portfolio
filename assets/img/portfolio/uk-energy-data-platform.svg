@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="diagram-title diagram-desc">
+  <title id="diagram-title">Bronze, Silver and Gold layers under Unity Catalog</title>
+  <desc id="diagram-desc">Placeholder diagram with three medallions, Bronze, Silver and Gold, leading into Unity Catalog.</desc>
+  <rect width="800" height="600" fill="#f3f7fb"/>
+  <text x="400" y="86" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#050d18">Lakehouse layers</text>
+  <text x="400" y="122" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#5b6570">Bronze to Silver to Gold</text>
+
+  <line x1="260" y1="292" x2="294" y2="292" stroke="#149ddd" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="294,284 308,292 294,300" fill="#149ddd"/>
+  <line x1="492" y1="292" x2="526" y2="292" stroke="#149ddd" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="526,284 540,292 526,300" fill="#149ddd"/>
+
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <circle cx="170" cy="292" r="78" fill="#f7efe6" stroke="#a56a32" stroke-width="8"/>
+    <circle cx="170" cy="292" r="54" fill="#cd8a45"/>
+    <text x="170" y="300" font-size="22" font-weight="700" fill="#fff">01</text>
+    <text x="170" y="398" font-size="20" font-weight="700" fill="#050d18">Bronze</text>
+    <text x="170" y="422" font-size="14" fill="#5b6570">Raw data</text>
+
+    <circle cx="400" cy="292" r="78" fill="#f4f6f8" stroke="#8d98a3" stroke-width="8"/>
+    <circle cx="400" cy="292" r="54" fill="#b7c0c8"/>
+    <text x="400" y="300" font-size="22" font-weight="700" fill="#1c2833">02</text>
+    <text x="400" y="398" font-size="20" font-weight="700" fill="#050d18">Silver</text>
+    <text x="400" y="422" font-size="14" fill="#5b6570">Cleaned data</text>
+
+    <circle cx="630" cy="292" r="78" fill="#fbf6e8" stroke="#b8922a" stroke-width="8"/>
+    <circle cx="630" cy="292" r="54" fill="#d4af37"/>
+    <text x="630" y="300" font-size="22" font-weight="700" fill="#3d3208">03</text>
+    <text x="630" y="398" font-size="20" font-weight="700" fill="#050d18">Gold</text>
+    <text x="630" y="422" font-size="14" fill="#5b6570">Curated data</text>
+  </g>
+
+  <rect x="120" y="470" width="560" height="72" rx="36" fill="#ffffff" stroke="#149ddd" stroke-width="3"/>
+  <text x="400" y="502" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#050d18">Unity Catalog</text>
+  <text x="400" y="526" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#5b6570">Governed access across the layers</text>
+</svg>
