@@ -722,6 +722,14 @@ section,
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
+.resume .section-title {
+  padding-bottom: 40px;
+}
+
+.resume .resume-download {
+  margin-top: 22px;
+}
+
 .resume .resume-title {
   color: var(--heading-color);
   font-size: 26px;
