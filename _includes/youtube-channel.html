@@ -1,0 +1,13 @@
+{% assign channel_url = "https://www.youtube.com/@MeePkes?sub_confirmation=1" %}
+{% assign show_video = true %}
+{% if page.youtube_url contains "k5DdPb-b29U" %}
+  {% assign show_video = false %}
+{% endif %}
+<aside class="channel-card">
+  <p class="channel-card__name">Pikesh Maharjan</p>
+  <p>Festivals, culture and travel vlogs from Nepal</p>
+  <a class="channel-card__button" href="{{ channel_url }}" target="_blank" rel="noopener noreferrer">Subscribe on YouTube</a>
+  {% if show_video %}
+    {% include youtube.html id="k5DdPb-b29U" title="Payo Jatra in Patan Durbar Square" %}
+  {% endif %}
+</aside>

@@ -1,6 +1,6 @@
 # AdSense configuration and consent
 
-AdSense is intentionally disabled in the repository. The committed `_data/runtime.json` contains an empty client ID, ad components render labelled reserved space, and `ads.txt` contains no publisher record.
+AdSense is intentionally disabled in the repository. The committed `_data/runtime.json` contains an empty client ID, unused ad slots render nothing, and `ads.txt` contains no publisher record. Blog pages show a YouTube channel card instead of an ad unit.
 
 ## Configure a build
 

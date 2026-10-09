@@ -272,6 +272,45 @@ h1, h2, h3 {
 
 .post-cta a { color: var(--blog-accent); font-weight: 700; }
 
+.channel-card {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.5rem 1.25rem;
+  background: var(--blog-card);
+  border: 1px solid var(--blog-border);
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(4, 11, 20, 0.06);
+}
+.channel-card__name {
+  margin: 0 0 0.35rem;
+  color: #050d18;
+  font-family: Raleway, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.channel-card > p:not(.channel-card__name) {
+  margin: 0 0 1rem;
+  color: var(--blog-muted);
+}
+.channel-card__button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #ffffff;
+  background: #149ddd;
+  border-radius: 50px;
+  font-family: Poppins, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.channel-card__button:hover,
+.channel-card__button:focus-visible {
+  color: #ffffff;
+  background: #128ccc;
+}
+.channel-card .video-embed { margin: 1.25rem 0 0; }
+
 .category-list { display: grid; gap: 2rem; }
 
 .category-section {
