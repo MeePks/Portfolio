@@ -754,6 +754,19 @@ section,
   margin-bottom: 10px;
 }
 
+.resume .resume-item h4.employer-heading {
+  text-transform: none;
+  line-height: 1.4;
+}
+
+.resume .title-progression {
+  margin: 4px 0 16px;
+}
+
+.resume .title-progression p {
+  margin: 0 0 4px;
+}
+
 .resume .resume-item h5 {
   font-size: 16px;
   padding: 5px 15px;
