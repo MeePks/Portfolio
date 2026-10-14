@@ -1432,7 +1432,9 @@ a:focus-visible, button:focus-visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  /* The portrait sits in the lower part of this tall photo. Center anchoring
+     crops his head off along the bottom of a wide hero; keep that edge in frame. */
+  object-position: center bottom;
 }
 
 .stats .stats-item {
