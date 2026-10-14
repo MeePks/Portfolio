@@ -126,7 +126,7 @@ def face_centered_portrait(source: Image.Image) -> Image.Image:
 
 def ensure_original_portrait() -> Image.Image:
     """Keep the full environmental portrait so the face crop can be regenerated."""
-    display = IMG / "my-profile-img.jpg"
+    display = IMG / "my-profile-face.jpg"
     if not ORIGINAL_PORTRAIT.exists():
         ORIGINAL_PORTRAIT.write_bytes(display.read_bytes())
     return Image.open(ORIGINAL_PORTRAIT).convert("RGB")
@@ -179,30 +179,30 @@ def social_card(portrait: Image.Image) -> Image.Image:
 
 def write_profile(portrait: Image.Image) -> None:
     """Write the face crop at its native size, plus a 400px-wide variant."""
-    save_jpeg(portrait, IMG / "my-profile-img.jpg", 84)
-    save_webp(portrait, IMG / "my-profile-img.webp", 80)
-    write_pair(portrait, IMG / "my-profile-img-400", min(400, portrait.width), jpeg_quality=84, webp_quality=80)
+    save_jpeg(portrait, IMG / "my-profile-face.jpg", 84)
+    save_webp(portrait, IMG / "my-profile-face.webp", 80)
+    write_pair(portrait, IMG / "my-profile-face-400", min(400, portrait.width), jpeg_quality=84, webp_quality=80)
 
 
 def main() -> None:
-    hero = Image.open(IMG / "hero-bg.jpg")
-    hero_before = (IMG / "hero-bg.jpg").stat().st_size
-    profile_before = (IMG / "my-profile-img.jpg").stat().st_size
+    hero = Image.open(IMG / "hero-mountain.jpg")
+    hero_before = (IMG / "hero-mountain.jpg").stat().st_size
+    profile_before = (IMG / "my-profile-face.jpg").stat().st_size
 
-    write_pair(hero, IMG / "hero-bg", 1600, jpeg_quality=78, webp_quality=74)
-    write_pair(hero, IMG / "hero-bg-800", 800, jpeg_quality=78, webp_quality=74)
+    write_pair(hero, IMG / "hero-mountain", 1600, jpeg_quality=78, webp_quality=74)
+    write_pair(hero, IMG / "hero-mountain-800", 800, jpeg_quality=78, webp_quality=74)
     portrait = face_centered_portrait(ensure_original_portrait())
     write_profile(portrait)
 
     card = social_card(portrait)
-    card_path = IMG / "og-card.jpg"
+    card_path = IMG / "og-card-face.jpg"
     save_jpeg(card, card_path, 86)
 
     skip = {
-        IMG / "hero-bg.jpg",
-        IMG / "hero-bg-800.jpg",
-        IMG / "my-profile-img.jpg",
-        IMG / "my-profile-img-400.jpg",
+        IMG / "hero-mountain.jpg",
+        IMG / "hero-mountain-800.jpg",
+        IMG / "my-profile-face.jpg",
+        IMG / "my-profile-face-400.jpg",
         ORIGINAL_PORTRAIT,
         card_path,
     }
@@ -213,20 +213,20 @@ def main() -> None:
 
     print("--- homepage candidates ---")
     for path in [
-        IMG / "hero-bg.jpg",
-        IMG / "hero-bg.webp",
-        IMG / "hero-bg-800.jpg",
-        IMG / "hero-bg-800.webp",
-        IMG / "my-profile-img.jpg",
-        IMG / "my-profile-img.webp",
-        IMG / "my-profile-img-400.jpg",
-        IMG / "my-profile-img-400.webp",
+        IMG / "hero-mountain.jpg",
+        IMG / "hero-mountain.webp",
+        IMG / "hero-mountain-800.jpg",
+        IMG / "hero-mountain-800.webp",
+        IMG / "my-profile-face.jpg",
+        IMG / "my-profile-face.webp",
+        IMG / "my-profile-face-400.jpg",
+        IMG / "my-profile-face-400.webp",
         card_path,
     ]:
         with Image.open(path) as image:
             print(f"{path.stat().st_size/1024:8.1f}KB {image.size[0]}x{image.size[1]} {path.name}")
-    hero_after = (IMG / "hero-bg.webp").stat().st_size
-    profile_after = (IMG / "my-profile-img.webp").stat().st_size
+    hero_after = (IMG / "hero-mountain.webp").stat().st_size
+    profile_after = (IMG / "my-profile-face.webp").stat().st_size
     saved = (hero_before + profile_before) - (hero_after + profile_after)
     print(f"hero+portrait webp savings vs originals: {saved/1024/1024:.2f}MB")
 
@@ -237,13 +237,13 @@ def refresh_portrait() -> None:
     print("face", detect_face(source))
     portrait = face_centered_portrait(source)
     write_profile(portrait)
-    card_path = IMG / "og-card.jpg"
+    card_path = IMG / "og-card-face.jpg"
     save_jpeg(social_card(portrait), card_path, 86)
     for path in (
-        IMG / "my-profile-img.jpg",
-        IMG / "my-profile-img.webp",
-        IMG / "my-profile-img-400.jpg",
-        IMG / "my-profile-img-400.webp",
+        IMG / "my-profile-face.jpg",
+        IMG / "my-profile-face.webp",
+        IMG / "my-profile-face-400.jpg",
+        IMG / "my-profile-face-400.webp",
         card_path,
         ORIGINAL_PORTRAIT,
     ):
