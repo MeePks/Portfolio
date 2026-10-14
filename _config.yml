@@ -46,3 +46,4 @@ exclude:
   - vendor
   - scripts
   - _data/runtime.example.json
+  - assets/img/my-profile-img-original.jpg
