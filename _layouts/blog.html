@@ -10,9 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@500;600;700&family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/vendor/bootstrap-icons/bootstrap-icons.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/shared.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/vendor/bootstrap-icons/bootstrap-icons.min.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  <link rel="stylesheet" href="{{ '/assets/css/shared.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   {% feed_meta %}
   {% include adsense-head.html %}
 </head>
